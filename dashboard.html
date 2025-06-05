@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    .dashboard-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #1e293b;
+      padding: 20px;
+      color: white;
+    }
+
+    .sidebar .logo {
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+    }
+
+    .sidebar nav ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      display: block;
+      padding: 8px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .sidebar nav ul li a:hover {
+      background-color: #334155;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .topbar h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .topbar p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2 class="logo">ResumeBuilder</h2>
+      <nav>
+        <ul>
+          <li><a href="#">🏠 Dashboard</a></li>
+          <li><a href="#">📄 My Resumes</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+          <li><a href="/logout">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Welcome Back, User!</h1>
+        <p>Create and manage your resumes here.</p>
+      </header>
+
+      <section class="cards">
+        <div class="card create-card">
+          <h3>Create New Resume</h3>
+          <p>Start building a professional resume from scratch.</p>
+          <a href="#" class="btn">+ Create Resume</a>
+        </div>
+
+        <div class="card saved-card">
+          <h3>Your Resumes</h3>
+          <p>View, edit or download saved resumes.</p>
+          <a href="#" class="btn">📁 View Resumes</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
